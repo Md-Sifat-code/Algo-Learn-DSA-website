@@ -1,0 +1,76 @@
+[
+  {
+    "id": "001",
+    "title": "Algorithm for Linear Search",
+    "algorithm": [
+      "Start from the first element and check each element in the array.",
+      "If the current element matches the target, return the index.",
+      "If the loop completes without finding the element, return -1."
+    ],
+    "pseudocode": "LinearSearch(arr, n, target):\n    for i = 0 to n-1:\n        if arr[i] == target:\n            return i  // Element found\n    return -1  // Element not found"
+  },
+  {
+    "id": "002",
+    "title": "Algorithm for Binary Search (Iterative)",
+    "algorithm": [
+      "Set left = 0 and right = n-1 (start and end index)",
+      "While left ≤ right",
+      "Compute mid = left + (right - left) / 2",
+      "If arr[mid] == target, return mid",
+      "If arr[mid] < target, search in the right half (left = mid + 1)",
+      "Else, search in the left half (right = mid - 1)",
+      "If not found, return -1"
+    ],
+
+    "pseudocode": "BinarySearch(arr, n, target):\n    left = 0\n    right = n - 1\n    while left <= right:\n        mid = left + (right - left) // 2\n        if arr[mid] == target:\n            return mid  // Element found\n        else if arr[mid] < target:\n            left = mid + 1  // Search in right half\n        else:\n            right = mid - 1  // Search in left half\n    return -1  // Element not found"
+  },
+  {
+    "id": "003",
+    "title": "Algorithm for Binary Search (Recursive)",
+    "algorithm": [
+      "Base Case: If left > right, return -1 (not found).",
+      "Compute mid = left + (right - left) / 2",
+      "If arr[mid] == target, return mid",
+      "If arr[mid] < target, search in the right half (BinarySearch(arr, mid+1, right, target))",
+      "Else, search in the left half (BinarySearch(arr, left, mid-1, target))"
+    ],
+
+    "pseudocode": "BinarySearchRecursive(arr, left, right, target):\n    if left > right:\n        return -1  // Element not found\n    mid = left + (right - left) // 2  // Correct integer division\n    if arr[mid] == target:\n        return mid  // Element found\n    else if arr[mid] < target:\n        return BinarySearchRecursive(arr, mid + 1, right, target)  // Search in right half\n    else:\n        return BinarySearchRecursive(arr, left, mid - 1, target)  // Search in left half"
+  },
+  {
+    "id": "004",
+    "title": "Algorithm for Counting Sort (Linear Time Sorting)",
+    "algorithm": [
+      "Find the maximum value in the array.",
+      "Create a count array of size max_value + 1 and initialize all elements to 0.",
+      "Store the count of each element in the count array.",
+      "Modify the count array to store the cumulative sum (used for placing elements correctly).",
+      "Build the output array by placing elements in their correct positions.",
+      "Copy the sorted elements back to the original array."
+    ],
+    "pseudocode": "CountSort(arr, n):\n    max_value = findMax(arr, n)  // Step 1: Find maximum value\n    count = array of size (max_value + 1) initialized to 0\n\n    // Step 2: Count occurrences of each element\n    for i = 0 to n - 1:\n        count[arr[i]] += 1\n\n    // Step 3: Compute cumulative sum\n    for i = 1 to max_value:\n        count[i] += count[i - 1]\n\n    // Step 4: Build the sorted array\n    output = array of size n\n    for i = n - 1 down to 0:\n        output[count[arr[i]] - 1] = arr[i]\n        count[arr[i]] -= 1\n\n    // Step 5: Copy sorted elements back to original array\n    for i = 0 to n - 1:\n        arr[i] = output[i]"
+  },
+  {
+    "id": "005",
+    "title": "Algorithm for Merge Sort",
+    "algorithm": [
+      "If the array has one or zero elements, it is already sorted.",
+      "Find the middle index of the array.",
+      "Recursively divide the array into two halves until each sub-array has one element.",
+      "Merge the two halves by comparing elements and placing them in sorted order.",
+      "Repeat the merging process until the full array is merged back in sorted order."
+    ],
+    "pseudocode": "MergeSort(arr, left, right):\n    if left >= right:\n        return  // Base case: one element is already sorted\n    mid = left + (right - left) // 2  // Find middle index\n    MergeSort(arr, left, mid)  // Recursively sort left half\n    MergeSort(arr, mid + 1, right)  // Recursively sort right half\n    Merge(arr, left, mid, right)  // Merge sorted halves\n\nMerge(arr, left, mid, right):\n    create leftSubArray from arr[left to mid]\n    create rightSubArray from arr[mid+1 to right]\n    i = j = 0, k = left\n    while i < size(leftSubArray) and j < size(rightSubArray):\n        if leftSubArray[i] <= rightSubArray[j]:\n            arr[k] = leftSubArray[i]\n            i += 1\n        else:\n            arr[k] = rightSubArray[j]\n            j += 1\n        k += 1\n    copy remaining elements from leftSubArray and rightSubArray into arr"
+  },
+  {
+    "id": "006",
+    "title": "Algorithm for Quick Sort",
+    "algorithm": [
+      "Choose a pivot element from the array.",
+      "Partition the array so that elements smaller than the pivot are on the left and larger elements are on the right.",
+      "Recursively apply the same process to the left and right sub-arrays.",
+      "Continue the partitioning process until the entire array is sorted."
+    ],
+    "pseudocode": "QuickSort(arr, left, right):\n    if left >= right:\n        return  // Base case: one element is already sorted\n    pivotIndex = Partition(arr, left, right)  // Partition the array\n    QuickSort(arr, left, pivotIndex - 1)  // Recursively sort left sub-array\n    QuickSort(arr, pivotIndex + 1, right)  // Recursively sort right sub-array\n\nPartition(arr, left, right):\n    pivot = arr[right]  // Choose rightmost element as pivot\n    i = left - 1  // Pointer for smaller elements\n    for j = left to right - 1:\n        if arr[j] < pivot:\n            i += 1\n            swap arr[i] and arr[j]\n    swap arr[i+1] and arr[right]  // Place pivot in correct position\n    return i + 1  // Return pivot index"
+  }
+]
