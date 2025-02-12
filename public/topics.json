@@ -72,31 +72,21 @@
   {
     "id": 15,
     "title": "Searching Algorithms",
-    "picture": "path_to_searching_image.jpg"
+    "picture": "/t-15.png"
   },
   {
     "id": 16,
     "title": "Sorting Algorithms",
-    "picture": "path_to_sorting_image.jpg"
+    "picture": "/t-16.png"
   },
   {
     "id": 17,
     "title": "Graph Algorithms",
-    "picture": "path_to_graph_algorithms_image.jpg"
+    "picture": "/t-17.png"
   },
   {
     "id": 18,
     "title": "Mathematical Algorithms",
-    "picture": "path_to_mathematical_algorithms_image.jpg"
-  },
-  {
-    "id": 19,
-    "title": "String Algorithms",
-    "picture": "path_to_string_algorithms_image.jpg"
-  },
-  {
-    "id": 20,
-    "title": "Geometric Algorithms",
-    "picture": "path_to_geometric_algorithms_image.jpg"
+    "picture": "/t-18.png"
   }
 ]
