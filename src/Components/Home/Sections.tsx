@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import { GiPaperArrow } from "react-icons/gi";
 // The path to your JSON file in the public directory
 const jsonFilePath = "/topics.json";
 
@@ -38,7 +38,13 @@ const Sections: React.FC = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold text-center mb-8">DSA Topics</h1>
+      <div>
+        <h1 className="text-purple-800 text-start mt-12 mb-12 text-6xl mark  sm:text-3xl md:text-4xl flex flex-row items-center ">
+          Al<span className="hana text-6xl">g</span>o{" "}
+          <span className="text-4xl">Topics</span>
+          <GiPaperArrow className="px-1" />
+        </h1>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
         {topicsData.map((topic) => (
           <div
@@ -53,14 +59,14 @@ const Sections: React.FC = () => {
                 className="w-full h-96 object-cover rounded-t-lg shadow-md"
               />
               {/* Dark background overlay using ::before pseudo-element */}
-              <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40 rounded-t-lg"></div>
+              <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 rounded-t-lg"></div>
             </div>
             {/* Overlay with title and button */}
             <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center rounded-t-lg p-4">
-              <h3 className="text-xl font-semibold text-white mb-4">
+              <h3 className="text-3xl hana font-normal text-white mb-4">
                 {topic.title}
               </h3>
-              <button className="bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-600 transition-all">
+              <button className="bg-purple-700 font-bold text-white py-2 px-6 rounded-xl hover:bg-blue-600 transition-all">
                 Learn More
               </button>
             </div>
