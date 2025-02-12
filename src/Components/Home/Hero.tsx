@@ -1,6 +1,7 @@
 import React from "react";
 import { FaArrowCircleDown } from "react-icons/fa";
 import Algorithms from "./Algorithms";
+import Sections from "./Sections";
 
 const Hero: React.FC = () => {
   return (
@@ -26,6 +27,7 @@ const Hero: React.FC = () => {
       </section>
       <section>
         <div className="container mx-auto">
+          <Sections />
           <Algorithms />
         </div>
       </section>

@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "title": "Arrays",
+    "picture": "/t-1.png"
+  },
+  {
+    "id": 2,
+    "title": "Linked Lists",
+    "picture": "/t-2.png"
+  },
+  {
+    "id": 3,
+    "title": "Stacks",
+    "picture": "/t-3.png"
+  },
+  {
+    "id": 4,
+    "title": "Queues",
+    "picture": "/t-4.png"
+  },
+  {
+    "id": 5,
+    "title": "Strings",
+    "picture": "/t-5.png"
+  },
+  {
+    "id": 6,
+    "title": "Trees",
+    "picture": "/t-6.png"
+  },
+  {
+    "id": 7,
+    "title": "Heaps",
+    "picture": "/t-7.png"
+  },
+  {
+    "id": 8,
+    "title": "Hashing",
+    "picture": "/t-8.png"
+  },
+  {
+    "id": 9,
+    "title": "Graphs",
+    "picture": "/t-9.png"
+  },
+  {
+    "id": 10,
+    "title": "Disjoint Set",
+    "picture": "/t-10.png"
+  },
+  {
+    "id": 11,
+    "title": "Dynamic Programming",
+    "picture": "/t-11.png"
+  },
+  {
+    "id": 12,
+    "title": "Greedy Algorithms",
+    "picture": "/t-12.png"
+  },
+  {
+    "id": 13,
+    "title": "Backtracking",
+    "picture": "/t-13.png"
+  },
+  {
+    "id": 14,
+    "title": "Bit Manipulation",
+    "picture": "/t-14.png"
+  },
+  {
+    "id": 15,
+    "title": "Searching Algorithms",
+    "picture": "path_to_searching_image.jpg"
+  },
+  {
+    "id": 16,
+    "title": "Sorting Algorithms",
+    "picture": "path_to_sorting_image.jpg"
+  },
+  {
+    "id": 17,
+    "title": "Graph Algorithms",
+    "picture": "path_to_graph_algorithms_image.jpg"
+  },
+  {
+    "id": 18,
+    "title": "Mathematical Algorithms",
+    "picture": "path_to_mathematical_algorithms_image.jpg"
+  },
+  {
+    "id": 19,
+    "title": "String Algorithms",
+    "picture": "path_to_string_algorithms_image.jpg"
+  },
+  {
+    "id": 20,
+    "title": "Geometric Algorithms",
+    "picture": "path_to_geometric_algorithms_image.jpg"
+  }
+]
