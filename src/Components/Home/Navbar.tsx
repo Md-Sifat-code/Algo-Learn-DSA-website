@@ -8,7 +8,8 @@ const Navbar: React.FC = () => {
         <div className="mt-6 flex flex-row justify-between items-center px-4 sm:px-6 md:px-8">
           <div>
             <h1 className="text-purple-800 mark text-4xl sm:text-3xl md:text-4xl">
-              Al<span className="hana">g</span>o
+              <span className="hana">P</span>- Al<span className="hana">g</span>
+              o
             </h1>
           </div>
           {/* navlinks */}

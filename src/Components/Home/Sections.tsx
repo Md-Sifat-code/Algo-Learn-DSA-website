@@ -37,29 +37,31 @@ const Sections: React.FC = () => {
   if (error) return <div className="text-center text-red-500">{error}</div>;
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto mb-12 ">
       <div>
-        <h1 className="text-purple-800 text-start mt-12 mb-12 text-6xl mark  sm:text-3xl md:text-4xl flex flex-row items-center ">
-          Al<span className="hana text-6xl">g</span>o{" "}
-          <span className="text-4xl">Topics</span>
-          <GiPaperArrow className="px-1" />
+        <h1 className="text-purple-800 text-start mt-12 mb-12 text-6xl mark  sm:text-3xl md:text-4xl flex flex-col justify-center items-center ">
+          <div className="flex items-center">
+            Al<span className="hana text-6xl">g</span>o{" "}
+            <span className="text-4xl">Topics</span>
+          </div>
+          <GiPaperArrow className="px-1 rotate-45" />
         </h1>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {topicsData.map((topic) => (
           <div
             key={topic.id}
-            className="relative bg-white shadow-lg rounded-lg p-4 flex flex-col items-center text-center"
+            className="relative bg-white shadow-lg rounded-4xl flex flex-col items-center text-center"
           >
             {/* Image with low dark shadow */}
             <div className="relative">
               <img
                 src={topic.picture}
                 alt={topic.title}
-                className="w-full h-96 object-cover rounded-t-lg shadow-md"
+                className="w-full h-64 object-cover rounded-4xl shadow-md"
               />
               {/* Dark background overlay using ::before pseudo-element */}
-              <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 rounded-t-lg"></div>
+              <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 rounded-4xl"></div>
             </div>
             {/* Overlay with title and button */}
             <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center rounded-t-lg p-4">

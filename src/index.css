@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+body{
+  background-color: #FAF5FF;
+}
 
 .mark {
   font-family: "Markazi Text", serif;
